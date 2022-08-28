@@ -12,12 +12,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 87px 120px 0;
+    margin: 87px 10px 0;
 }
 
 
 .container {
-    margin: 100px 0 100px;
+    margin: 50px 0 50px;
     width: 1444px;
 }
 
@@ -47,10 +47,11 @@ main {
 .navbar {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
     align-items: center;
 }
 .nav-logo p{
-    /* font-size: 40px; */
+    font-size: 40px;
     font-family: Poppins;
 }
 /* .nav-details {
@@ -99,8 +100,8 @@ main {
 .blog-thumbnail img{
     position: relative;
     justify-content: center;
-    width: 430px;
-    height: 425px;
+    width: 80%;
+    /* height: 425px; */
         
 }
 
@@ -112,13 +113,13 @@ main {
 .collections {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 50px;
+    grid-column-gap: 5px;
 }
 .collection {
     background: #ad999988;
-    width: 329px;
+    width: 300px;
     height: 476px;
-    justify-content: space-between;
+    justify-content: center;
     margin: 10px;
     border-radius: 10px;
 }
@@ -136,7 +137,7 @@ main {
     font-size: 12px;
 }
 .fa-star.filled {
-    color: #FFC014;
+    color: #ffbe0c;
 }
 .fa-star.empty {
     color: #AEAEAE;
@@ -151,6 +152,7 @@ main {
 }
 
 .featured-info img {
+    width: 50%;
     margin: 10px;
 }
 
@@ -158,8 +160,8 @@ main {
 /* Footer Styles */
 .full-footer {
     background-color: #0A0826;
-    width: 1680px;
-    height: 250px;
+    width: 100%;
+    height: 200px;
     border-radius: 15px;
 }
 
@@ -174,23 +176,30 @@ main {
 
 /* .footer-details {
     display: flex;
-} */
+    justify-content: center;
+}  */
 
-/* .social-links ul {
- margin:0 10px ;
-}  
+/* .social-links ul{
+    display: flex;
+    justify-content: flex-end;
+     margin:10px ;
+}   */
 
 /* Mobile Queries Start */
-@media only screen and (max-width: 688px) {
-    .container {
-        width: 100%;
-    }
+@media only screen and (max-width: px) {
+        .container {
+             width: 100%;
+        }
 
-    .blogs, .collections, .featured-infos {
-         
-         grid-template-columns: repeat(1, 1fr);
-     }
-     .collectionss, .blog{
-         flex-direction: column;
-     }
+        .blogs, .collections, .featured-infos {
+            
+            grid-template-columns:1fr;
+            /* grid-template-rows:repeat(1, 1fr); */
+        }
+        .collectionss, .blog{
+            flex-direction: column;
+        }
+        .featured-info{
+            flex-direction:column;
+        }
     }
